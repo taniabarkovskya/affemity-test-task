@@ -1,0 +1,37 @@
+.goal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.goal__title {
+  font-size: 1.8rem;
+  line-height: 110%;
+}
+
+.goal__options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.goal__options-select {
+  text-decoration: none;
+
+  width: calc(50% - 0.6rem);
+  padding: 1.5rem 1rem;
+
+  border: 0.1rem solid #d2cfdf;
+  border-radius: 1rem;
+}
+
+.goal__options-select:hover {
+  border: 0.1rem solid #31728d;
+}
