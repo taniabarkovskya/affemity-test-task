@@ -1,0 +1,11 @@
+:root {
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+  color: #111111;
+}
+
+@media (min-width: 480px) {
+  :root {
+    font-size: 15px;
+  }
+}
