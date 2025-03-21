@@ -18,7 +18,7 @@ export const OptionCard: React.FC<Props> = (props) => {
       })}
     >
       <div className="option-card__content">
-        <img src={option.icon} alt="" className="option-card__content-image" />
+        <img src={option.icon} alt={option.title} className="option-card__content-image" />
         <div className="option-card__content-title">{option.title}</div>
       </div>
       <input

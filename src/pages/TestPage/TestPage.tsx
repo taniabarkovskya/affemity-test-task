@@ -9,11 +9,11 @@ export const TestPage = () => {
   const { goal } = useGoal();
 
   const options: Option[] = [
-    { title: `Skill1_${goal}`, icon: "/skill1_img.svg", checked: false },
-    { title: `Skill2_${goal}`, icon: "/skill2_img.svg", checked: false },
-    { title: `Skill3_${goal}`, icon: "/skill3_img.svg", checked: false },
-    { title: `Skill4_${goal}`, icon: "/skill4_img.svg", checked: false },
-    { title: `Skill5_${goal}`, icon: "/skill5_img.svg", checked: false },
+    { title: `Skill1_${goal}`, icon: "images/skill1_img.svg", checked: false },
+    { title: `Skill2_${goal}`, icon: "images/skill2_img.svg", checked: false },
+    { title: `Skill3_${goal}`, icon: "images/skill3_img.svg", checked: false },
+    { title: `Skill4_${goal}`, icon: "images/skill4_img.svg", checked: false },
+    { title: `Skill5_${goal}`, icon: "images/skill5_img.svg", checked: false },
   ];
 
   return (

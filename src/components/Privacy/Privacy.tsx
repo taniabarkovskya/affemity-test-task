@@ -4,7 +4,7 @@ export const Privacy = () => {
   return (
     <div className="privacy">
       <div className="privacy__icon">
-        <img src="/protect.svg" alt="Protect icon" />
+        <img src="images/protect.svg" alt="Protect icon" />
       </div>
       <div className="privacy__text">
         We respect your privacy and are committed to protecting your personal

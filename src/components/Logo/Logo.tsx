@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <Link to="/home" className="logo">
       <div className="logo__image">
-        <img className="logo__image-img" src="/logo.svg" alt="Affemity logo" />
+        <img className="logo__image-img" src="images/logo.svg" alt="Affemity logo" />
       </div>
       <h1 className="logo__title">Affemity</h1>
     </Link>
