@@ -1,15 +1,23 @@
 import "./ConfirmationForm.css";
 import { useState } from "react";
 import { MainButton } from "../MainButton";
-import { throttle } from "../../utils/throttle";
 import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
+import { useThrottleEffect } from "../../hooks/useThrottleEffect";
 
 export const ConfirmationForm = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
 
   const navigate = useNavigate();
+
+  useThrottleEffect(
+    () => {
+      setEmailError(validateEmail(email));
+    },
+    [email],
+    500
+  );
 
   const validateEmail = (email: string) => {
     if (!email) {
@@ -23,10 +31,9 @@ export const ConfirmationForm = () => {
     return "";
   };
 
-  const throttledHandleEmailChange = throttle((newEmail: string) => {
+  const handleEmailChange = (newEmail: string) => {
     setEmail(newEmail);
-    setEmailError(validateEmail(newEmail));
-  }, 500);
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -48,7 +55,7 @@ export const ConfirmationForm = () => {
         <input
           type="text"
           value={email}
-          onChange={(event) => throttledHandleEmailChange(event.target.value)}
+          onChange={(event) => handleEmailChange(event.target.value)}
           className={classNames("confirmation-form__input-field", {
             "confirmation-form__input-field--has-error": emailError,
           })}

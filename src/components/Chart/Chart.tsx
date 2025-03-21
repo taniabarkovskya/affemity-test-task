@@ -24,7 +24,7 @@ type CustomDotProps = {
   index?: number;
 };
 
-const CustomDot: React.FC<CustomDotProps> = ({ cx = 0, cy = 0, index = 0}) => {
+const CustomDot: React.FC<CustomDotProps> = ({ cx = 0, cy = 0, index = 0 }) => {
   if (index === 0)
     return (
       <circle
@@ -57,16 +57,32 @@ type CustomLabelProps = {
   index?: number;
 };
 
-const CustomLabel: React.FC<CustomLabelProps> = ({ x = 0, y = 0, width = 0, index = 0}) => {
-  const labelWidth = 45;
-  const labelHeight = 27;
+const CustomLabel: React.FC<CustomLabelProps> = ({
+  x = 0,
+  y = 0,
+  width = 0,
+  index = 0,
+}) => {
+  const windowInnerWidth = window.innerWidth;
+
+  let labelWidth = 45;
+  let labelHeight = 28;
+  let yValueFirst = y - labelHeight - 15;
+  let yValueSecond = y - labelHeight - 10;
+  
+  if (windowInnerWidth > 480) {
+    labelWidth = 60;
+    labelHeight = 38;
+    yValueFirst = y - labelHeight - 25;
+    yValueSecond = y - labelHeight - 20;
+  }
 
   if (index === 0) {
     return (
       <g>
         <foreignObject
           x={x + width / 2 - labelWidth / 2}
-          y={y - labelHeight - 10} 
+          y={yValueFirst}
           width={labelWidth}
           height={labelHeight}
           className="chart__label"
@@ -82,7 +98,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ x = 0, y = 0, width = 0, inde
       <g>
         <foreignObject
           x={x + width / 2 - labelWidth / 2}
-          y={y - labelHeight - 10}
+          y={yValueSecond}
           width={labelWidth}
           height={labelHeight}
           className="chart__label"
@@ -100,7 +116,11 @@ type CustomXAxisLabelProps = {
   payload: { value: string };
 };
 
-const CustomXAxisLabel: React.FC<CustomXAxisLabelProps> = ({ x = 0, y = 0, payload }) => {
+const CustomXAxisLabel: React.FC<CustomXAxisLabelProps> = ({
+  x = 0,
+  y = 0,
+  payload,
+}) => {
   return (
     <text
       x={x}
@@ -133,7 +153,12 @@ export const Chart = () => {
             radius={[5, 5, 5, 5]}
             label={CustomLabel as ImplicitLabelType}
           />
-          <XAxis dataKey="name" axisLine={{ stroke: "#D2CFDF" }} tickLine={false} tick={CustomXAxisLabel as React.SVGProps<SVGTextElement>} />
+          <XAxis
+            dataKey="name"
+            axisLine={{ stroke: "#D2CFDF" }}
+            tickLine={false}
+            tick={CustomXAxisLabel as React.SVGProps<SVGTextElement>}
+          />
           <Line
             type="monotone"
             dataKey="lineValue"
