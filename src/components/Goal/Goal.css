@@ -5,9 +5,6 @@
   gap: 1.2rem;
 
   text-align: center;
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 120%;
 }
 
 .goal__title {
@@ -23,7 +20,13 @@
 }
 
 .goal__options-select {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 120%;
+  background-color: #fff;
   text-decoration: none;
+  cursor: pointer;
 
   width: calc(50% - 0.6rem);
   padding: 1.5rem 1rem;
@@ -34,4 +37,14 @@
 
 .goal__options-select:hover {
   border: 0.1rem solid #31728d;
+}
+
+.goal__other{
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 120%;
+  background-color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
 }

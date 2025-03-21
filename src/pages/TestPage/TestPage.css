@@ -1,0 +1,39 @@
+.test{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 2.8rem); /*100vh - indents */
+}
+
+.test__header{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.test__heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantity {
+  color: #31728d;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 120%;
+}
+
+.quantity__all {
+  color: #111111;
+}
+
+.test__question{
+  text-align: center;
+}
+
+.test__question-subtitle {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 120%;
+}

@@ -1,0 +1,9 @@
+.results{
+  margin-top: 1.7rem;
+}
+
+.results__content{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

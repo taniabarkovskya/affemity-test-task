@@ -11,10 +11,12 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 import { TestPage } from "./pages/TestPage";
 import { ResultsPage } from "./pages/ResultsPage";
 import { ConfirmationPage } from "./pages/ConfirmationPage";
+import { GoalProvider } from "./context/GoalProvider.tsx";
 
 export const Root = () => {
   return (
     <StrictMode>
+      <GoalProvider>
         <Router>
           <Routes>
             <Route path="/" element={<App />}>
@@ -27,6 +29,7 @@ export const Root = () => {
             </Route>
           </Routes>
         </Router>
+      </GoalProvider>
     </StrictMode>
   );
 };

@@ -1,0 +1,47 @@
+.confirmation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.confirmation-form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.confirmation-form__input-field {
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 120%;
+
+  padding: 1.45rem 1.2rem;
+  background-color: #e8e6ef;
+  border: 0.1rem solid #e8e6ef;
+  border-radius: 1rem;
+}
+
+.confirmation-form__input-field:focus {
+  background-color: #fff;
+  border: 0.1rem solid #31728d;
+}
+
+.confirmation-form__input-field:not(:placeholder-shown) {
+  background-color: #fff;
+}
+
+.confirmation-form__input-field--has-error {
+  border: 0.1rem solid #ea6747;
+}
+
+.confirmation-form__input-field--has-error:focus {
+  border: 0.1rem solid #ea6747;
+}
+
+.confirmation-form__input-error {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 120%;
+  color: #ea6747;
+}
