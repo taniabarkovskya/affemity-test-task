@@ -43,7 +43,7 @@
 .option-card__checkbox:checked {
   border: 0.1rem solid #31728d;
   background-color: #31728d;
-  background-image: url("/check.svg");
+  background-image: url("images/check.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
