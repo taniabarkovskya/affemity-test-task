@@ -1,7 +1,7 @@
 import "./ConfirmationForm.css";
 import { useState } from "react";
 import { MainButton } from "../MainButton";
-import { throttle } from "../../utils/trottle";
+import { throttle } from "../../utils/throttle";
 import classNames from "classnames";
 import { useNavigate } from "react-router-dom";
 
