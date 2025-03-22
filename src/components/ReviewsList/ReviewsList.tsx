@@ -1,5 +1,4 @@
 import "./ReviewsList.css";
-import "swiper/css";
 import { Review } from "../../types/Review";
 import { ReviewCard } from "../ReviewCard";
 import { Swiper, SwiperSlide } from "swiper/react";
