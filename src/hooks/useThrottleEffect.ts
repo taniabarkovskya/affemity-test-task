@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useThrottleEffect = (effect: () => void, deps: string[], delay: number) => {
+export const useThrottleEffect = (effect: () => void, deps: unknown[], delay: number) => {
   useEffect(() => {
     const handler = setTimeout(() => effect(), delay);
 

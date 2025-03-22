@@ -19,14 +19,17 @@ export const OptionCard: React.FC<Props> = (props) => {
       onClick={() => onCheck(option.title)}
     >
       <div className="option-card__content">
-        <img src={option.icon} alt={option.title} className="option-card__content-image" />
+        <img
+          src={option.icon}
+          alt={option.title}
+          className="option-card__content-image"
+        />
         <div className="option-card__content-title">{option.title}</div>
       </div>
       <input
         type="checkbox"
         className="option-card__checkbox"
         checked={option.checked}
-        onChange={() => onCheck(option.title)}
       />
     </div>
   );

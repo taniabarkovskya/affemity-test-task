@@ -1,4 +1,4 @@
-export type Data = {
+export type ChartData = {
   name: string;
   fill: string;
   value: number;

@@ -5,14 +5,17 @@
 
   padding: 0.9rem 1.6rem;
 
-  border: 0.1rem solid #d2cfdf;
+  background-color: var(--bg-light);
+  border: 0.1rem solid var(--border-color);
   border-radius: 1rem;
 
   cursor: pointer;
+
+  transition: all 0.3s linear;
 }
 
 .option-card--checked {
-  border: 0.1rem solid #31728d;
+  border: 0.1rem solid var(--accent-color);
 }
 
 .option-card__content {
@@ -36,15 +39,15 @@
   appearance: none;
   width: 1.9rem;
   height: 1.9rem;
-  border: 0.1rem solid #d2cfdf;
+  border: 0.1rem solid var(--border-color);
   border-radius: 0.2rem;
 
   cursor: pointer;
 }
 
 .option-card__checkbox:checked {
-  border: 0.1rem solid #31728d;
-  background-color: #31728d;
+  border: 0.1rem solid var(--accent-color);
+  background-color: var(--accent-color);
   background-image: url("images/check.svg");
   background-repeat: no-repeat;
   background-position: center center;

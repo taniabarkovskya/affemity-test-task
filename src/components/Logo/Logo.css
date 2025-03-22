@@ -21,7 +21,7 @@
 .logo__title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #31728d;
+  color: var(--accent-color);
   line-height: 87%;
   letter-spacing: -0.1rem; /*-4%*/
 }

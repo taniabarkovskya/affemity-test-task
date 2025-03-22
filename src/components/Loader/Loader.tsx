@@ -40,7 +40,7 @@ export const Loader: React.FC<Props> = (props) => {
 
   const handlePopupClose = () => {
     setIsPopUpOpen(false);
-    setFilled(51); // Продовжуємо завантаження після закриття попапу
+    setFilled(51);
   };
 
 

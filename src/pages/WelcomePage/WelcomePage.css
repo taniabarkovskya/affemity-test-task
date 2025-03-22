@@ -1,4 +1,4 @@
-.welcome{
+.welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,8 +13,8 @@
   gap: 1.2rem;
 }
 
-.welcome__header-highlighted{
-  color: #31728d;
+.welcome__header-highlighted {
+  color: var(--accent-color);
 }
 
 .welcome__header-text {
@@ -23,7 +23,7 @@
   line-height: 120%;
 }
 
-.welcome__chart{
+.welcome__chart {
   height: 19.7rem;
   width: 32.7rem;
 }

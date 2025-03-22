@@ -1,4 +1,4 @@
-.pop-up__wrapper{
+.pop-up__wrapper {
   position: absolute;
   top: 0;
   right: 0;
@@ -19,10 +19,10 @@
   gap: 1.2rem;
 
   padding: 2rem;
-  background-color: #faf9ff;
+  background-color: var(--bg-modal);
   border-radius: 1rem;
 
-  width: 27rem; /*!!!*/
+  width: 27rem;
 }
 
 .pop-up__heading-subtitle {
@@ -30,7 +30,7 @@
   font-size: 1.2rem;
   line-height: 120%;
   text-align: center;
-  color: #666666;
+  color: var(--text-secondary);
   margin-bottom: 0.8rem;
 }
 
@@ -58,8 +58,8 @@
   width: calc(50% - 0.6rem);
   padding: 1.45rem 1.6rem;
 
-  background-color: #fff;
-  border: 0.1rem solid #d2cfdf;
+  background-color: var(--bg-light);
+  border: 0.1rem solid var(--border-color);
   border-radius: 1rem;
 
   cursor: pointer;

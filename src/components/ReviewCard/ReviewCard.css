@@ -4,8 +4,8 @@
   gap: 0.8rem;
 
   padding: 1.2rem 1.6rem;
-  background-color: #fff;
-  border: 0.1rem solid #d2cfdf;
+  background-color: var(--bg-light);
+  border: 0.1rem solid var(--border-color);
   border-radius: 1rem;
 }
 
@@ -19,7 +19,7 @@
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 120%;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .review-card__comment {
@@ -33,11 +33,11 @@
   gap: 0.8rem;
 }
 
-.rating__icon{
+.rating__icon {
   height: 1.6rem;
 }
 
-.rating__icon-img{
+.rating__icon-img {
   height: 100%;
   object-fit: contain;
 }
@@ -46,5 +46,5 @@
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 120%;
-  color: #666666;
+  color: var(--text-secondary);
 }

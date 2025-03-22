@@ -23,7 +23,7 @@
   height: 1.4rem;
   position: relative;
 
-  background-color: #e8e6ef;
+  background-color: var(--bg-disabled);
   border-radius: 1rem;
   overflow: hidden;
 }
@@ -33,7 +33,7 @@
   height: 100%;
   z-index: 1;
 
-  background-color: #31728d;
+  background-color: var(--accent-color);
   border-radius: 1rem;
 
   transition: width 0.3s linear;

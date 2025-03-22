@@ -24,27 +24,27 @@
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 120%;
-  background-color: #fff;
+  background-color: var(--bg-light);
   text-decoration: none;
   cursor: pointer;
 
   width: calc(50% - 0.6rem);
   padding: 1.5rem 1rem;
 
-  border: 0.1rem solid #d2cfdf;
+  border: 0.1rem solid var(--border-color);
   border-radius: 1rem;
 }
 
 .goal__options-select:hover {
-  border: 0.1rem solid #31728d;
+  border: 0.1rem solid var(--accent-color);
 }
 
-.goal__other{
+.goal__other {
   font-family: inherit;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 120%;
-  background-color: #fff;
+  background-color: var(--bg-light);
   text-decoration: underline;
   cursor: pointer;
 }

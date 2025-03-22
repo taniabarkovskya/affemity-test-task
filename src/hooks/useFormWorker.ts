@@ -11,6 +11,7 @@ const DELAY = 500;
 export const useFormWorker = ({ initialEmail = "" }: UseFormWorkerProps) => {
   const [email, setEmail] = useState(initialEmail);
   const [emailError, setEmailError] = useState("");
+  const [isTouched, setIsTouched] = useState(false);
   const navigate = useNavigate();
 
   const validateEmail = (email: string) => {
@@ -25,14 +26,17 @@ export const useFormWorker = ({ initialEmail = "" }: UseFormWorkerProps) => {
 
   useThrottleEffect(
     () => {
-      setEmailError(validateEmail(email));
+      if (isTouched) {
+        setEmailError(validateEmail(email));
+      }
     },
-    [email],
+    [email, isTouched],
     DELAY
   );
 
   const handleEmailChange = (newEmail: string) => {
     setEmail(newEmail);
+    if (!isTouched) setIsTouched(true);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -44,6 +48,7 @@ export const useFormWorker = ({ initialEmail = "" }: UseFormWorkerProps) => {
 
     navigate("/results");
     setEmail("");
+    setIsTouched(false);
   };
 
   return {

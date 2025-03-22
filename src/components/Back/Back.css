@@ -3,7 +3,7 @@
   width: 4rem;
   height: 4rem;
 
-  border: 0.1rem solid #d2cfdf;
+  border: 0.1rem solid var(--border-color);
   border-radius: 50%;
 
   display: flex;
@@ -13,8 +13,8 @@
   transition: all 0.3s linear;
 }
 
-.back:hover{
-  background-color: #d2cfdf;
+.back:hover {
+  background-color: var(--border-color);
 }
 
 .back__icon {
