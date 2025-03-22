@@ -11,7 +11,7 @@ export const LoadersList: React.FC<Props> = (props) => {
   const { loadersTitles } = props;
 
   const [currentLoader, setCurrentLoader] = useState(1);
-  
+
   const handleNextLoader = () => {
     if (currentLoader < loadersTitles.length) {
       setCurrentLoader((prev) => prev + 1);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useThrottleEffect } from "./useThrottleEffect";
 
@@ -14,7 +14,7 @@ export const useFormWorker = ({ initialEmail = "" }: UseFormWorkerProps) => {
   const [isTouched, setIsTouched] = useState(false);
   const navigate = useNavigate();
 
-  const validateEmail = (email: string) => {
+  const validateEmail = useCallback((email: string) => {
     if (!email) {
       return "Email is required";
     }
@@ -22,7 +22,7 @@ export const useFormWorker = ({ initialEmail = "" }: UseFormWorkerProps) => {
       return "Email must include '@'";
     }
     return "";
-  };
+  }, []);
 
   useThrottleEffect(
     () => {

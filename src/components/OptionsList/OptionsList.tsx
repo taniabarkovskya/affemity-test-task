@@ -1,7 +1,7 @@
 import "./OptionsList.css";
 import { OptionCard } from "../OptionCard";
 import { MainButton } from "../MainButton";
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Option } from "../../types/Option";
 import { useNavigate } from "react-router-dom";
 
@@ -16,31 +16,42 @@ export const OptionsList: React.FC<Props> = (props) => {
 
   const navigate = useNavigate();
 
-  const handleCheck = (title: string) => {
+  const handleCheck = useCallback((title: string) => {
     setCurrentOptions((prevOptions) =>
       prevOptions.map((option) =>
-        option.title === title ? { ...option, checked: !option.checked } : option
+        option.title === title
+          ? { ...option, checked: !option.checked }
+          : option
       )
     );
-  };
+  }, []);
 
-  const isAnyChecked = currentOptions.some((option) => option.checked);
+  const isAnyChecked = useMemo(
+    () => currentOptions.some((option) => option.checked),
+    [currentOptions]
+  );
 
-  const handleContinue = () => {
+  const handleContinue = useCallback(() => {
     if (isAnyChecked) {
       navigate("/confirmation");
     }
-  };
+  }, [isAnyChecked, navigate]);
 
   return (
     <div className="options-list">
       <div className="options-list__list">
         {currentOptions.map((option) => (
-          <OptionCard key={option.title} option={option} onCheck={handleCheck} />
+          <OptionCard
+            key={option.title}
+            option={option}
+            onCheck={handleCheck}
+          />
         ))}
       </div>
       <div className="options-list__button">
-        <MainButton isDisabled={!isAnyChecked} onClick={handleContinue}>Continue</MainButton>
+        <MainButton isDisabled={!isAnyChecked} onClick={handleContinue}>
+          Continue
+        </MainButton>
       </div>
     </div>
   );
