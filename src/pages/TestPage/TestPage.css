@@ -11,7 +11,11 @@
   gap: 2.4rem;
 }
 
-.test__heading{
+.test__heading-progress{
+  margin-bottom: 1.2rem;
+}
+
+.test__heading-main{
   display: flex;
   align-items: center;
   justify-content: space-between;

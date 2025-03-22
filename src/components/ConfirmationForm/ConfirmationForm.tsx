@@ -1,50 +1,10 @@
 import "./ConfirmationForm.css";
-import { useState } from "react";
-import { MainButton } from "../MainButton";
 import classNames from "classnames";
-import { useNavigate } from "react-router-dom";
-import { useThrottleEffect } from "../../hooks/useThrottleEffect";
+import { MainButton } from "../MainButton";
+import { useFormWorker } from "../../hooks/useFormWorker";
 
 export const ConfirmationForm = () => {
-  const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
-
-  const navigate = useNavigate();
-
-  useThrottleEffect(
-    () => {
-      setEmailError(validateEmail(email));
-    },
-    [email],
-    500
-  );
-
-  const validateEmail = (email: string) => {
-    if (!email) {
-      return "Email is required";
-    }
-
-    if (!email.includes("@")) {
-      return "Email must include '@'";
-    }
-
-    return "";
-  };
-
-  const handleEmailChange = (newEmail: string) => {
-    setEmail(newEmail);
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const error = validateEmail(email);
-    setEmailError(error);
-
-    if (error) return;
-
-    navigate("/results");
-    setEmail("");
-  };
+  const { email, emailError, handleEmailChange, handleSubmit } = useFormWorker({});
 
   return (
     <form

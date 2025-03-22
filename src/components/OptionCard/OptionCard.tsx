@@ -16,6 +16,7 @@ export const OptionCard: React.FC<Props> = (props) => {
       className={classNames("option-card", {
         "option-card--checked": option.checked,
       })}
+      onClick={() => onCheck(option.title)}
     >
       <div className="option-card__content">
         <img src={option.icon} alt={option.title} className="option-card__content-image" />

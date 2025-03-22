@@ -1,5 +1,5 @@
-import { ImplicitLabelType } from "recharts/types/component/Label";
 import "./Chart.css";
+import { ImplicitLabelType } from "recharts/types/component/Label";
 import {
   ComposedChart,
   Line,
@@ -9,8 +9,9 @@ import {
   XAxis,
 } from "recharts";
 import { LineDot } from "recharts/types/cartesian/Line";
+import { Data } from "../../types/Data";
 
-const data = [
+const data: Data[] = [
   { name: "Week 1", fill: "#A9DEF4", value: 275, lineValue: 270 },
   { name: "", fill: "#9CC9DC", value: 400, lineValue: 330 },
   { name: "", fill: "#69A8C2", value: 525, lineValue: 425 },

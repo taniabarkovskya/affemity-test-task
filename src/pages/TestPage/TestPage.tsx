@@ -4,6 +4,7 @@ import { Back } from "../../components/Back";
 import { Logo } from "../../components/Logo";
 import { OptionsList } from "../../components/OptionsList";
 import { Option } from "../../types/Option";
+import { ProgressBar } from "../../components/ProgressBar";
 
 export const TestPage = () => {
   const { goal } = useGoal();
@@ -20,10 +21,15 @@ export const TestPage = () => {
     <div className="test">
       <div className="test__header">
         <div className="test__heading">
-          <Back />
-          <Logo />
-          <div className="quantity">
-            1<span className="quantity__all">/34</span>
+          <div className="test__heading-progress">
+            <ProgressBar />
+          </div>
+          <div className="test__heading-main">
+            <Back />
+            <Logo />
+            <div className="quantity">
+              1<span className="quantity__all">/34</span>
+            </div>
           </div>
         </div>
         <div className="test__question">

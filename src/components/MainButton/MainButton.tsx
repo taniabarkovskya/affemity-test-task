@@ -8,7 +8,7 @@ type Props = {
   onClick?: () => void;
 };
 
-export const MainButton: React.FC<Props> = ({ children, isDisabled, type = "button", onClick }) => {
+export const MainButton: React.FC<Props> = ({ children, isDisabled = false, type = "button", onClick }) => {
 
   return (
     <button
@@ -17,7 +17,7 @@ export const MainButton: React.FC<Props> = ({ children, isDisabled, type = "butt
         "main-button--disabled": isDisabled,
       })}
       onClick={onClick}
-      disabled={isDisabled || false}
+      disabled={isDisabled}
     >
       {children}
     </button>
