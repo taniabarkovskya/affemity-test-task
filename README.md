@@ -1,6 +1,11 @@
 # 📊 Affemity test task
 
-A dynamic and interactive web application featuring animated UI elements and data visualization.
+This is a four-page landing page designed to guide users through a personalized quiz experience:
+
+1️⃣ Home – Features a "Path to Success" chart (built with Recharts) and goal selection.
+2️⃣ Quiz – A dynamic questionnaire with multiple-choice options.
+3️⃣ Confirmation – Email validation step to receive personalized results.
+4️⃣ Results Loading – Animated loading screen with engaging user comments.
 
 ## 🚀 Demo
 [Live Demo](https://taniabarkovskya.github.io/affemity-test-task/)
